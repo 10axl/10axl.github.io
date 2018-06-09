@@ -23,7 +23,7 @@ $(document).ready(function() {
 	var loc = getParameterByName('txt')
 	var url = "https://cdn.discordapp.com/attachments/"+loc+".txt";
 	if(loc)
-		$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent(url) + '&callback=?', function(data){
+		$.getJSON('https://www.whateverorigin.org/get?url=' + encodeURIComponent(url) + '&callback=?', function(data){
 			// filter html
 			var text = data.contents.split('&').join('&amp;').split('<').join('&lt;').split('>').join('&gt;').split('\n').join('<br>');
 			// reformat for logs (<md> tokens for markdown later)
